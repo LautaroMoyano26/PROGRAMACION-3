@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas HTML5</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #004080;
+            border-bottom: 2px solid #004080;
+            padding-bottom: 0.5rem;
+        }
+        ul {
+            columns: 3;
+            -webkit-columns: 3;
+            -moz-columns: 3;
+            gap: 2rem;
+            padding-left: 1rem;
+        }
+        li {
+            margin-bottom: 0.4rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Listado de etiquetas válidas en HTML5</h1>
+    <p>A continuación se enumeran todas las etiquetas reconocidas por HTML5 actualmente:</p>
+    <ul>
+        <li>&lt;a&gt; 
+            <a href="www.youtube.com">Youtube</a>
+        </li>
+        <li>&lt;abbr&gt;
+            <abbr title="El Mejor Programador">EMP</abbr> soy yo
+
+        </li>
+        <li>&lt;area&gt;</li>
+        <img src="imagen1.jpg" alt="Workplace" usemap="#workmap" width="50" height="50">
+
+            <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+            <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+            </map>
+        <li>&lt;article&gt;</li>
+        <article>
+            <h3>Programacion</h3>
+            <p>Primer tarea de Programacion</p>
+        </article>
+        <li>&lt;aside&gt;</li>
+        <aside>
+            <h3>Aside</h3>
+            <p>Probando el aside dando un ejemplo</p>
+        </aside>
+        <li>&lt;audio&gt;</li>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        </audio>
+        <li>&lt;b&gt;
+            <p>texto sin b</p><b>Texto con b</b>
+        </li>
+        <li>&lt;base&gt;
+            <base href="www.google.com" target="_blank">
+        </li>
+        <li>&lt;bdi&gt;
+            <ul>
+                <li>Lauti: <bdi> 8 Califica.</bdi></li>
+                <li>Tomas: <bdi> 9 Califica.</bdi></li>
+                <li>Ramiro: <bdi> 7 Califica.</bdi></li>
+            </ul>
+        </li>
+        <li>&lt;bdo&gt;
+            <p>Lautaro el crack</p>  
+            <p><bdo dir="rtl">Lautaro el crack</bdo></p> 
+        </li>
+        <li>&lt;blockquote&gt;
+            <p>Esto es un ejemplo de uso para el bloque de texto:</p>
+            <blockquote cite:"www.google.com">
+                
+                <p>Probando el bloque de texto</p>
+            </blockquote>
+        </li>
+        <li>&lt;body&gt;</li>
+        <p>Es donde se ubican todos los contenidos en un doumento de html, solo puede haber un "body" en el documento de HTML</p>
+        <li>&lt;br&gt;
+            <p>"br" va a forzar<br>un quiebre de linea<br>en un texto</p>
+        </li>
+        <li>&lt;button&gt;
+            <button type="button">Boton de ejemplo</button>
+        </li>
+        <li>&lt;canvas&gt;
+            <p>HTML5 Canvas</p>
+
+            <canvas id="myCanvas" width="50" height="25" style="border:1px solid grey"></canvas>
+        </li>
+        <li>&lt;caption&gt;
+            <table>
+                <caption>Meses de ahorro</caption>
+                <tr>
+                  <th>Mes</th>
+                  <th>Ahorro</th>
+                </tr>
+                <tr>
+                  <td>Febrero</td>
+                  <td>$100.000</td>
+                </tr>
+              </table>
+        </li>
+        <li>&lt;cite&gt;
+            <p>El elemento</p>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg" width="50" height="60" alt="El Grito">
+            <p><cite>El Grito</cite> de Edvard Munch. Pintado en 1893.</p>
+
+        </li>
+        <li>&lt;code&gt;
+            <p>La etiqueta <code>button</code> en HTML define un botón clickeable.</p>
+
+<p>La propiedad <code>background-color</code> en CSS define el color de fondo de un elemento.</p>
+
+        </li>
+        <li>&lt;col&gt; &lt;colgroup&gt</li>
+        <p>Esto incluye "col" y "colgroup" para definir columnas en una tabla</p>
+        <table>
+            <colgroup>
+                <col span="2" style="background-color: antiquewhite;">
+                <col style="background-color: salmon;">
+            </colgroup>
+            <tr>
+                <th>Columna 1</th>
+                <th>Columna 2</th>
+                <th>Columna 3</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </table>
+        <li>&lt;data&gt;
+            <p>El elemento <data> se usa para asociar un valor de máquina (como un ID o código) con un contenido visible para humanos.</p>
+            <ul>
+                <li><data value="21053">Tomate Cherry</data></li>
+                <li><data value="21054">Tomate Redondo</data></li>
+                <li><data value="21055">Tomate Snack</data></li>
+              </ul>
+        </li>
+        <li>&lt;datalist&gt;
+            <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+                <option value="Edge">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+              </datalist>
+        </li>
+        <li>&lt;dd&gt;
+            <p>Estos tres elementos se utilizan para crear una lista de descripción:</p>
+
+                <dl>
+                <dt>Notebook</dt>
+                <dd>Computadora portátil utilizada para estudiar o trabajar</dd>
+                <dt>Monitor</dt>
+                <dd>Pantalla externa que se conecta a una computadora</dd>
+                </dl>
+
+        </li>
+        <li>&lt;del&gt;
+            <p>Un texto con una parte eliminada y una parte nueva insertada:</p>
+
+            <p>Mi comida favorita es <del>pizza</del> <ins>sushi</ins>.</p>
+
+        </li>
+        <li>&lt;details&gt;
+            <details>
+                <summary>Abre con la flecha</summary>
+                <p>Informacion mas detallada.</p>
+              </details>
+        </li>
+        <li>&lt;dfn&gt;
+            <p>La etiqueta <dfn><b>HTML</b></dfn> se refiere al lenguaje de marcado utilizado para construir páginas web.</p>
+        </li>
+        <li>&lt;dialog&gt;
+            <p>Me lo pone a un costado y tapa otras cosas, pero es un cuadro de dialogo.</p>
+        </li>
+        <li>&lt;div&gt;
+            <div style="background-color: #ddd; padding: 0.5rem;">Este es un div, útil para agrupar contenido.</div>
+        </li>
+        <li>&lt;dl&gt;
+            <dl>
+                <dt>HTML</dt>
+                <dd>Lenguaje de marcado para crear páginas web.</dd>
+                <dt>CSS</dt>
+                <dd>Lenguaje para estilizar elementos HTML.</dd>
+            </dl>
+        </li>
+        <li>&lt;dt&gt;
+            <p>Elemento usado dentro de una lista de definiciones para el término principal.</p>
+        </li>
+        <li>&lt;em&gt;
+            <p>Este texto tiene <em>énfasis</em> usando la etiqueta <code>em</code>.</p>
+        </li>
+        <li>&lt;embed&gt;
+            <embed src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="200" height="100">
+        </li>
+        <li>&lt;fieldset&gt;
+            <fieldset>
+                <legend>Información Personal</legend>
+                Nombre: <input type="text">
+            </fieldset>
+        </li>
+        <li>&lt;figcaption&gt;
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg" width="50" height="60" alt="El Grito">
+                <figcaption>El Grito de Munch</figcaption>
+            </figure>
+        </li>
+        <li>&lt;figure&gt;
+            <figure>
+                <img src="https://via.placeholder.com/100" alt="Imagen de ejemplo">
+                <figcaption>Una imagen de prueba con su descripción</figcaption>
+            </figure>
+        </li>
+        <li>&lt;footer&gt;
+            <footer>
+                <p>© 2025 Lautaro</p>
+            </footer>
+        </li>
+        <li>&lt;form&gt;
+            <form action="#">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+            </form>
+        </li>
+        <li>&lt;h1&gt; hasta &lt;h6&gt;
+            <h1>Título H1</h1>
+            <h2>Título H2</h2>
+            <h3>Título H3</h3>
+            <h4>Título H4</h4>
+            <h5>Título H5</h5>
+            <h6>Título H6</h6>
+        </li>
+        <li>&lt;head&gt;
+            <p>Contiene metadatos del documento HTML como el título, enlaces a hojas de estilo, scripts, etc. No se muestra en la página.</p>
+        </li>
+        <li>&lt;header&gt;
+            <header>
+                <h2>Este es un encabezado principal</h2>
+            </header>
+        </li>
+        <li>&lt;hr&gt;
+            <p>Texto arriba</p>
+            <hr>
+            <p>Texto debajo</p>
+        </li>
+        <li>&lt;html&gt;
+            <p>Es el elemento raíz de un documento HTML. Contiene todos los demás elementos.</p>
+        </li>
+        <li>&lt;i&gt;
+            <p>Texto en <i>cursiva</i> usando la etiqueta <code>i</code>.</p>
+        </li>
+        <li>&lt;iframe&gt;
+            <iframe src="https://www.example.com" width="200" height="100"></iframe>
+        </li>
+        <li>&lt;img&gt;
+            <img src="https://via.placeholder.com/60" alt="Imagen de prueba">
+        </li>
+        <li>&lt;input&gt;
+            <input type="text" placeholder="Escribí algo...">
+        </li>
+        <li>&lt;ins&gt;
+            <p>Texto con <ins>contenido insertado</ins>.</p>
+        </li>
+        <li>&lt;kbd&gt;
+            <p>Presioná <kbd>Ctrl</kbd> + <kbd>C</kbd> para copiar.</p>
+        </li>
+        <li>&lt;label&gt;
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email">
+        </li>
+        <li>&lt;legend&gt;
+            <fieldset>
+                <legend>Datos de contacto</legend>
+                <input type="text" placeholder="Nombre">
+            </fieldset>
+        </li>
+        <li>&lt;li&gt;
+            <p>Elemento de una lista. Ya esta siendo usado para cada entrada de esta misma lista.</p>
+        </li>
+        <li>&lt;link&gt;
+            <p>Se usa en el <code>&lt;head&gt;</code> para enlazar hojas de estilo CSS u otros recursos externos.</p>
+        </li>
+        <li>&lt;main&gt;
+            <main>
+                <p>Contenido principal de la página.</p>
+            </main>
+        </li>
+        <li>&lt;map&gt;
+            <p>Ya está usado anteriormente junto con la etiqueta <code>&lt;area&gt;</code> para definir zonas clickeables en una imagen.</p>
+        </li>
+        <li>&lt;mark&gt;
+            <p>Este texto está <mark>marcado</mark> con la etiqueta <code>mark</code>.</p>
+        </li>
+        <li>&lt;math&gt;
+            <p>Se usa para mostrar notación matemática con MathML, aunque no todos los navegadores lo soportan bien aún.</p>
+        </li>
+        <li>&lt;menu&gt;
+            <menu>
+                <li>Opción 1</li>
+                <li>Opción 2</li>
+            </menu>
+        </li>
+        <li>&lt;menuitem&gt;
+            <p>Elemento para menús contextuales, actualmente está obsoleto y no se usa en navegadores modernos.</p>
+        </li>
+        <li>&lt;meta&gt;
+            <p>Se usa dentro del <code>&lt;head&gt;</code> para definir metadatos como codificación, viewport, etc.</p>
+        </li>
+        <li>&lt;meter&gt;
+            <p>Progreso de CPU: <meter value="0.6">60%</meter></p>
+        </li>
+        <li>&lt;nav&gt;
+            <nav>
+                <a href="#">Inicio</a> |
+                <a href="#">Servicios</a> |
+                <a href="#">Contacto</a>
+            </nav>
+        </li>
+        <li>&lt;noscript&gt;
+            <noscript>Tu navegador no soporta JavaScript.</noscript>
+        </li>
+        <li>&lt;object&gt;
+            <object data="https://www.w3.org" width="200" height="100">Contenido alternativo</object>
+        </li>
+        <li>&lt;ol&gt;
+            <ol>
+                <li>Elemento uno</li>
+                <li>Elemento dos</li>
+                <li>Elemento tres</li>
+            </ol>
+        </li>
+        <li>&lt;optgroup&gt;
+                    <label for="frutas">Frutas:</label>
+                <select id="frutas">
+                <optgroup label="Cítricos">
+                    <option>Naranja</option>
+                    <option>Limón</option>
+                </optgroup>
+                <optgroup label="Frutas rojas">
+                    <option>Frutilla</option>
+                    <option>Cereza</option>
+                </optgroup>
+                    </select>
+        </li>
+        <li>&lt;option&gt;
+            <label for="colores">Colores:</label>
+            <select id="colores">
+                <option>Rojo</option>
+                <option>Verde</option>
+                <option>Azul</option>
+            </select>
+        </li>
+        <li>&lt;output&gt;
+            <form oninput="res.value = parseInt(a.value) + parseInt(b.value)">
+                <input type="range" id="a" value="10"> + 
+                <input type="number" id="b" value="5"> = 
+                <output name="res" for="a b">15</output>
+            </form>
+        </li>
+        <li>&lt;p&gt;
+            <p>Este es un párrafo de ejemplo con la etiqueta &lt;p&gt;.</p>
+        </li>
+        <li>&lt;param&gt;
+            <p>Hace que se active el auto play, por lo que si lo habilitas, el sonido comenzara a sonar en el momento en el que la pagina se cargue.</p>
+        </li>
+        <li>&lt;pre&gt;
+            <pre>
+                Este es un texto
+                    con formato 
+                        predefinido.
+                    </pre>
+        </li>
+        <li>&lt;progress&gt;
+            <label for="progreso">Progreso:</label>
+            <progress id="progreso" value="70" max="100">70%</progress>
+        </li>
+        <li>&lt;q&gt;
+            <p>Ella dijo: <q>No voy a rendirme nunca</q>.</p>
+        </li>
+        <li>&lt;rp&gt;, &lt;rt&gt;, &lt;ruby&gt;
+            <ruby>
+                漢 <rp>(</rp><rt>ㄏㄢˋ</rt><rp>)</rp>
+            </ruby>
+        </li>
+        <li>&lt;s&gt;
+            <p>Este precio antes era <s>$100</s>, ahora cuesta $80.</p>
+        </li>
+        <li>&lt;samp&gt;
+            <p>El sistema respondió: <samp>Error 404: Not Found</samp></p>
+        </li>
+        <li>&lt;script&gt;
+            <script>
+                document.getElementById("demo").innerHTML = "Hello JavaScript!";
+                </script>
+        </li>
+        <li>&lt;section&gt;
+            <section>
+                <P>Define una sección dentro de un documento HTML.</P>
+                <h2>Noticias</h2>
+                <p>Últimas novedades del día.</p>
+            </section>
+        </li>
+        <li>&lt;select&gt;
+            <p>Este es un ejemplo de un select con opciones.</p>
+            <label for="pais">Selecciona tu país:</label>
+        <select id="pais">
+        <option>Argentina</option>
+        <option>Chile</option>
+        <option>Uruguay</option>
+        </select>
+        </li>
+        <li>&lt;slot&gt;
+            <p>No lo encontre en la documentación de HTML5.</p>
+        </li>
+        <li>&lt;small&gt;
+            <p><small>Este texto es pequeño.</small></p>
+            
+        </li>
+        <li>&lt;source&gt;
+            <p>Un reproductor de audio con dos archivos fuente. El navegador elegirá el primer <source> que soporte.</p>
+        </li>
+        <li>&lt;span&gt;
+            <p>Este es un <span style="color: red;">texto en rojo</span> dentro de un párrafo.</p>
+        </li>
+        <li>&lt;strong&gt;
+            <p><strong>Esto es un texto importante</strong></p>
+        </li>
+        <li>&lt;style&gt;
+            <p>Cambia el color de fondo de la página con este estilo.</p>
+            <style>
+                body {
+                    background-color: rgb(211, 245, 245);
+                }
+            </style>
+        </li>
+        <li>&lt;sub&gt;
+            
+            <p>La fórmula química del agua es H<sub>2</sub>O.</p>
+        </li>
+        <li>&lt;summary&gt;
+            <details>
+                <summary>Haz clic para ver más</summary>
+                <p>Este texto aparece al hacer clic.</p>
+            </details>
+
+        </li>
+        <li>&lt;sup&gt;</li>
+        <p>El número pi al cuadrado es π<sup>2</sup>.</p>
+        <li>&lt;svg&gt;
+            <p>Un ejemplo de SVG.</p>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" fill="blue" />
+            </svg>
+        </li>
+        <li>&lt;table&gt;
+            <p>Una tabla con dos filas y dos columnas.</p>
+            <table border="1">
+                <tr>
+                    <th>Nombre</th><th>Edad</th>
+                </tr>
+                <tr>
+                    <td>Lautaro</td><td>21</td>
+                </tr>
+            </table>
+        </li>
+        <li>&lt;tbody&gt;
+            <p>Tbody es el cuerpo de una tabla.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mouse</td>
+                        <td>$5000</td>
+                    </tr>
+                    <tr>
+                        <td>Teclado</td>
+                        <td>$7000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>&lt;td&gt;
+            <p>td es un elemento de tabla de datos.</p>
+            <table border="1">
+                <tr>
+                    <td>Celda 1</td>
+                    <td>Celda 2</td>
+                </tr>
+            </table>
+        </li>
+        <li>&lt;template&gt;
+            <p>Un template es un elemento que se puede reutilizar. En este momento es invisible hasta que utilizemos JS</p>
+            <template id="mi-template">
+                <p>Este es un contenido invisible en el DOM hasta que se use con JS</p>
+            </template>
+        </li>
+        <li>&lt;textarea&gt;
+            <p>Es un campo de texto que permite escribir varias líneas de texto.</p>
+            <textarea name="comentario" rows="3" cols="30">Escribe algo..</textarea>
+        </li>
+        <li>&lt;tfoot&gt;
+            <p>El pie de una tabla.</p>
+            <table>
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td>$12.000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </li>
+        <li>&lt;th&gt;
+            <p>Es un encabezado de una tabla.</p>
+            <table border="1">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                </tr>
+
+            </table>
+        </li>
+        <li>&lt;thead&gt;
+            <p>Es el encabezado de una tabla.</p>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Nota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>10</td>
+                    </tr>
+                </tbody>
+            </table>
+        </li>
+        <li>&lt;time&gt;
+            <p>La clase empieza a las <time datetime="2025-04-11T09:00">9:00 AM</time>.</p>
+        </li>
+        <li>&lt;title&gt;
+            <p>La etiqueta &lt;title&gt; define el título que aparece en la pestaña del navegador.</p>
+        </li>
+        <li>&lt;tr&gt;
+            <p>Es una fila de una tabla.</p>
+        </li>
+        <li>&lt;track&gt;
+            <p>Track es un video pero con substitulos en 2 idiomas.</p>
+        </li>
+        <li>&lt;u&gt;
+            <p>Este es un <u>texto subrayado</u> usando la etiqueta &lt;u&gt;.</p>
+        </li>
+        <li>&lt;ul&gt;
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </li>
+        <li>&lt;var&gt;
+            
+            <p>En matemática: el área de un círculo es <var>πr²</var></p>
+        </li>
+        <li>&lt;video&gt;
+            <video width="200" height="100" controls>
+                <source src="video.mp4" type="video/mp4">
+                <source src="video.ogg" type="video/ogg">
+                Tu navegador no soporta el video.
+            </video>
+        </li>
+        <li>&lt;wbr&gt;
+            <p>Uso de wbr para permitir corte de palabra: Supercalifrag<wbr>ilistico<wbr>espialidoso</p>
+        </li>
+    </ul>
+</body>
+</html>
