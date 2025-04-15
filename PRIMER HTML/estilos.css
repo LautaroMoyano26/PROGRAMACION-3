@@ -1,0 +1,24 @@
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #def5d8;
+            color: #531818;
+        }
+        h1 {
+            color: #1c652b;
+            border-bottom: 2px solid #052d08;
+            padding-bottom: 0.5rem;
+        }
+        ul {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+            gap: 2rem;
+            padding-left: 1rem;
+        }
+        li {
+            margin-bottom: 1rem;
+        }
