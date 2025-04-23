@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>Mi Página Personal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Iconos Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+<!-- SimpleLightbox CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css">
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
@@ -11,6 +15,15 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 </head>
+<!-- SimpleLightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.js"></script>
+<script>
+  new SimpleLightbox('.portfolio-gallery a', {
+    captionsData: 'title',
+    captionDelay: 250,
+    close: true,
+  });
+</script>
 <body>
 
 <!-- Navbar -->
@@ -66,38 +79,47 @@
   </div>
 </section>
 
-<!-- Proyectos -->
-<section id="proyectos" class="py-5 fondo-proyectos">
+<!-- Proyectos tipo galería -->
+<section id="proyectos" class="py-5">
   <div class="container">
     <h2 class="text-center mb-4">Proyectos</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Proyecto Innovacion</h5>
-            <p class="card-text">Desarrollo de un software adaptable a 
-              cualquier peluquería o centro de estética, fácil de instalar y usar, 
-              con capacidad de ser distribuido.
-              Resuelve los principales problemas de gestión de turnos, stock y 
-              clientes en centros de estética y peluquerías. La propuesta surge a partir de una experiencia puntual y se expande hacia un enfoque general 
-              adaptable a distintos tipos de negocios del rubro.</p>
-              <p><strong>Tecnologías utilizadas:</strong> HTML, CSS, JavaScript, Bootstrap, Python</p>
-            <a href="https://github.com/LautaroMoyano26?tab=repositories" class="btn btn-outline-primary" target: _blank>Ver más</a>
+    <div class="row g-4 portfolio-gallery">
+
+      <!-- Proyecto 1 -->
+      <div class="col-md-6 col-lg-4">
+        <a href="proyecto-peluqueria-miniatura.png" class="portfolio-box" title="
+          <strong>Proyecto Innovación</strong><br>
+          Desarrollo de un software adaptable a cualquier peluquería o centro de estética.<br>
+          <strong>Tecnologías:</strong> HTML, CSS, JS, Bootstrap, Python.<br>
+          <a href='https://github.com/LautaroMoyano26?tab=repositories' target='_blank'>Ver más</a>
+        ">
+          <img src="img/proyecto1_thumb.jpg" class="img-fluid" alt="Proyecto 1">
+          <div class="portfolio-box-caption">
+            <div class="project-category text-white-50">Software</div>
+            <div class="project-name">Gestor para peluquerías</div>
           </div>
-        </div>
+        </a>
       </div>
-      <!-- Más proyectos... -->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Proyecto de Estadística</h5>
-            <p class="card-text">Aplicación educativa en Python para resolver cálculos matemáticos y estadísticos como funciones cuadráticas, matrices y medidas de tendencia central.</p>
-            <p><strong>Tecnologías utilizadas:</strong> Python, Tkinter</p>
-            <a href="https://github.com/TomasAliberti07/Estadistica" class="btn btn-outline-primary" target="_blank">Ver más</a>
+
+      <!-- Proyecto 2 -->
+      <div class="col-md-6 col-lg-4">
+        <a href="img/proyecto2.jpg" class="portfolio-box" title="
+          <strong>Proyecto de Estadística</strong><br>
+          App educativa en Python para funciones cuadráticas, matrices y más.<br>
+          <strong>Tecnologías:</strong> Python, Tkinter.<br>
+          <a href='https://github.com/TomasAliberti07/Estadistica' target='_blank'>Ver más</a>
+        ">
+          <img src="img/proyecto2_thumb.jpg" class="img-fluid" alt="Proyecto 2">
+          <div class="portfolio-box-caption">
+            <div class="project-category text-white-50">Educativo</div>
+            <div class="project-name">App de Estadística</div>
           </div>
-        </div>
+        </a>
       </div>
-    </section>
+
+    </div>
+  </div>
+</section>
 
 <!--Skills-->
 <section class="py-5">
@@ -108,7 +130,7 @@
       <span class="badge bg-secondary mx-1">C#</span>
       <span class="badge bg-secondary mx-1">MySQL</span>
       <span class="badge bg-secondary mx-1">HTML/CSS</span>
-      <span class="badge bg-secondary mx-1">Tkinter</span>
+      <span class="badge bg-secondary mx-1" style="margin: 1%;">Tkinter</span>
     </div>
   </div>
 </section>
