@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
 
 body {
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: 'Merriweather', serif;
+}
+
+/* Para los títulos podés usar la sans-serif */
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: 'Merriweather Sans', sans-serif;
 }
 .habilidades .badge {
     font-size: 0.9rem;
@@ -11,3 +16,30 @@ body {
 .fondo-proyectos {
     background-color: #f5f5dc; /* Beige clásico */
   }
+
+  .hero-header {
+    background: linear-gradient(rgba(7, 36, 20, 0.85), rgba(7, 36, 20, 0.85)),
+                url('bg-masthead.jpg') center/cover no-repeat;
+                font-family: 'Merriweather Sans', sans-serif;
+                font-weight: 700;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-header {
+      background-position: center top;
+      padding: 3rem 1rem;
+    }
+    
+    .hero-header img {
+      width: 150px;
+    }
+  
+    .hero-header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .hero-header .lead {
+      font-size: 1rem;
+    }
+  }
+  
