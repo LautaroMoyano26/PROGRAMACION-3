@@ -2,41 +2,45 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Página Personal</title>
+  <title>Lautaro Moyano | Desarrollador Web</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Desarrollador web especializado en crear sitios web elegantes y funcionales">
   <!-- Iconos Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
-<!-- SimpleLightbox CSS -->
+  <!-- SimpleLightbox CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="estilos.css">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+<body>
+
 <!-- SimpleLightbox JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.1/simple-lightbox.min.js"></script>
 <script>
-  new SimpleLightbox('.portfolio-gallery a', {
-    captionsData: 'title',
-    captionDelay: 250,
-    close: true,
+  document.addEventListener('DOMContentLoaded', function() {
+    new SimpleLightbox('.portfolio-gallery a', {
+      captionsData: 'title',
+      captionDelay: 250,
+      close: true,
+    });
   });
 </script>
-<body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
   <div class="container">
     <a class="navbar-brand" href="#">Lautaro Moyano</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
         <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
         <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
       </ul>
     </div>
@@ -44,49 +48,90 @@
 </nav>
 
 <!-- Hero -->
-<header class="hero-header text-center text-white py-5">
+<header class="hero-header text-center text-white">
   <div class="container">
     <img src="128059398.jpg" 
-         class="rounded-circle mb-3" 
+         class="rounded-circle mb-4" 
          alt="Foto de perfil"
-         style="width: 250px;">
-    <h1 style="color: beige;">Lautaro Moyano</h1>
-    <p class="lead" style="color: beige;">
+         style="width: 220px;" data-aos="zoom-in">
+    <h1 data-aos="fade-up" data-aos-delay="200">Lautaro Moyano</h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="300">
       <span id="typed-text"></span>
       <script>
-        var typed = new Typed("#typed-text", {
-          strings: [
-            "Desarrollador Web",
-            "Apasionado por la Tecnología"
-          ],
-          typeSpeed: 60,
-          backSpeed: 40,
-          backDelay: 1500,
-          loop: true
+        document.addEventListener('DOMContentLoaded', function() {
+          var typed = new Typed("#typed-text", {
+            strings: [
+              "Desarrollador Web",
+              "Apasionado por la Tecnología",
+              "Creador de Experiencias Digitales"
+            ],
+            typeSpeed: 60,
+            backSpeed: 40,
+            backDelay: 1500,
+            loop: true
+          });
         });
       </script>
     </p>
+    <div class="mt-5" data-aos="fade-up" data-aos-delay="400">
+      <a href="#contacto" class="btn btn-primary btn-lg rounded-pill px-5 py-3 me-3">Contáctame</a>
+      <a href="#proyectos" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3">Ver Proyectos</a>
+    </div>
   </div>
 </header>
 
 <!-- Sobre mí -->
-<section id="sobre-mi" class="py-5 bg-light">
+<section id="sobre-mi" class="py-5">
   <div class="container">
-    <h2 class="text-center mb-4">Sobre mí</h2>
-    <p class="text-center">Soy un estudiante de Desarrollo de Software, actualmente cursando tercer año, 
-        con una base sólida en lenguajes clave como Python, C#, sistemas de gestión de bases de 
-        datos como MySQL y Desarrollo Web.</p>
+    <h2 class="text-center section-title" data-aos="fade-up">Sobre mí</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+        <p class="text-center">Soy un estudiante de Desarrollo de Software, actualmente cursando tercer año, 
+            con una base sólida en lenguajes clave como Python, C#, sistemas de gestión de bases de 
+            datos como MySQL y Desarrollo Web. Mi pasión es crear soluciones digitales elegantes que combinen 
+            funcionalidad y diseño excepcional.</p>
+      </div>
+    </div>
+    
+    <div class="row mt-5 justify-content-center">
+      <div class="col-md-10">
+        <div class="row text-center">
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-4">
+              <i class="bi bi-code-slash text-primary" style="font-size: 3rem;"></i>
+              <h3 class="mt-4">Desarrollo Web</h3>
+              <p class="text-muted">Creación de sitios web modernos, responsivos y optimizados para todos los dispositivos.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-4">
+              <i class="bi bi-database text-primary" style="font-size: 3rem;"></i>
+              <h3 class="mt-4">Bases de Datos</h3>
+              <p class="text-muted">Diseño e implementación de bases de datos eficientes y seguras para aplicaciones web.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="p-4">
+              <i class="bi bi-phone text-primary" style="font-size: 3rem;"></i>
+              <h3 class="mt-4">Diseño Responsivo</h3>
+              <p class="text-muted">Interfaces adaptables que funcionan perfectamente en cualquier dispositivo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- Proyectos tipo galería -->
-<section id="proyectos" class="py-5 fondo-proyectos text-white">
+<section id="proyectos" class="py-5 fondo-proyectos">
   <div class="container">
-    <h2 class="text-center mb-5" style="color: rgb(11, 49, 11);">Mis Proyectos</h2>
+    <h2 class="text-center section-title" data-aos="fade-up">Mis Proyectos</h2>
+    <p class="text-center text-muted mb-5" data-aos="fade-up" data-aos-delay="100">Una muestra de los proyectos en los que he trabajado recientemente</p>
+    
     <div class="row">
-      
       <!-- Proyecto 1 -->
-      <div class="col-md-6 col-lg-4 mb-4">
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
         <div class="project-card">
           <a href="https://github.com/LautaroMoyano26" target="_blank">
             <img src="proyecto-peluqueria-miniatura.png" class="img-fluid" alt="Proyecto 1">
@@ -98,7 +143,7 @@
       </div>
 
       <!-- Proyecto 2 -->
-      <div class="col-md-6 col-lg-4 mb-4">
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
         <div class="project-card">
           <a href="https://github.com/TomasAliberti07/Estadistica" target="_blank">
             <img src="proyecto-estadistica-miniatura.png" class="img-fluid" alt="Proyecto 2">
@@ -108,82 +153,280 @@
           </a>
         </div>
       </div>
+      
+      <!-- Proyecto 3 (Nuevo) -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card">
+          <a href="#" target="_blank">
+            <img src="WhatsApp Image 2025-04-22 at 10.12.58.jpeg" class="img-fluid" alt="Proyecto 3">
+            <div class="overlay">
+              <div class="texto-overlay">Proyecto Portfolio</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="400">
+      <a href="https://github.com/LautaroMoyano26" class="btn btn-outline-dark rounded-pill px-4 py-2" target="_blank">
+        <i class="bi bi-github me-2"></i>Ver más proyectos
+      </a>
+    </div>
+  </div>
+</section>
 
+<!-- Planes de Venta -->
+<section id="planes" class="py-5">
+  <div class="container">
+    <h2 class="text-center section-title" data-aos="fade-up">Planes de Desarrollo Web</h2>
+    <p class="text-center text-muted mb-5" data-aos="fade-up" data-aos-delay="100">Soluciones personalizadas para tu presencia online. Elige el plan que mejor se adapte a tus necesidades.</p>
+    
+    <div class="row">
+      <!-- Plan Básico -->
+      <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100">
+          <div class="card-header bg-dark text-white">
+            <h3 class="my-0 fw-normal">Básico</h3>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title text-center">$500 <small class="text-muted fw-light">USD</small></h1>
+            <div class="divider"></div>
+            <ul class="list-unstyled mt-4 mb-5">
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Sitio web de 3-5 páginas</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Diseño responsive</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Formulario de contacto</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Integración con redes sociales</li>
+              <li class="mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> SEO básico</li>
+              <li class="mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> Mantenimiento mensual</li>
+              <li class="mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> Funcionalidades avanzadas</li>
+            </ul>
+            <div class="d-grid mt-auto">
+              <a href="#contacto" class="btn btn-outline-dark">Solicitar Presupuesto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Plan Standard -->
+      <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 featured-plan">
+          <div class="card-header text-white">
+            <h3 class="my-0 fw-normal">Standard</h3>
+            <span class="badge bg-warning text-dark mt-2">Más Popular</span>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title text-center">$1500 <small class="text-muted fw-light">USD</small></h1>
+            <div class="divider"></div>
+            <ul class="list-unstyled mt-4 mb-5">
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Sitio web de 5-10 páginas</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Diseño responsive premium</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Formularios avanzados</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Integración con redes sociales</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> SEO optimizado</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> 3 meses de mantenimiento</li>
+              <li class="mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> E-commerce</li>
+            </ul>
+            <div class="d-grid mt-auto">
+              <a href="#contacto" class="btn btn-primary">Solicitar Presupuesto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Plan Premium -->
+      <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100">
+          <div class="card-header bg-dark text-white">
+            <h3 class="my-0 fw-normal">Premium</h3>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h1 class="card-title text-center">$2500 <small class="text-muted fw-light">USD</small></h1>
+            <div class="divider"></div>
+            <ul class="list-unstyled mt-4 mb-5">
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Sitio web ilimitado</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Diseño personalizado exclusivo</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Sistema de gestión de contenidos</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> E-commerce completo</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> SEO avanzado</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> 6 meses de mantenimiento</li>
+              <li class="mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Análisis de datos y reportes</li>
+            </ul>
+            <div class="d-grid mt-auto">
+              <a href="#contacto" class="btn btn-outline-dark">Solicitar Presupuesto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+      <p class="text-muted">¿Necesitas una solución personalizada? <a href="#contacto" class="text-primary">Contáctame</a> para discutir tus requerimientos específicos.</p>
     </div>
   </div>
 </section>
 
 <!-- Contacto -->
-<section id="contacto" class="py-5 bg-light">
+<section id="contacto" class="py-5">
   <div class="container px-4 px-lg-5">
     <div class="row justify-content-center">
       <div class="col-lg-8 col-xl-6 text-center">
-        <h2 class="mt-0">¡Pongámonos en contacto!</h2>
-        <hr class="divider" />
-        <p class="text-muted mb-5">¿Querés consultarme sobre algún proyecto? Completá el formulario y te responderé pronto.</p>
+        <h2 class="section-title" data-aos="fade-up">¡Pongámonos en contacto!</h2>
+        <p class="text-muted mb-5" data-aos="fade-up" data-aos-delay="100">¿Interesado en trabajar juntos? Completa el formulario y te responderé a la brevedad.</p>
       </div>
     </div>
-    <div class="row justify-content-center mb-5">
-      <div class="col-lg-6">
-        <form>
-          <!-- Nombre -->
-          <div class="form-floating mb-3">
-            <input class="form-control" id="nombre" type="text" placeholder="Tu nombre completo" />
-            <label for="nombre">Nombre completo</label>
-          </div>
-          <!-- Email -->
-          <div class="form-floating mb-3">
-            <input class="form-control" id="email" type="email" placeholder="nombre@ejemplo.com" />
-            <label for="email">Correo electrónico</label>
-          </div>
-          <!-- Teléfono -->
-          <div class="form-floating mb-3">
-            <input class="form-control" id="telefono" type="tel" placeholder="(11) 1234-5678" />
-            <label for="telefono">Teléfono</label>
-          </div>
-          <!-- Mensaje -->
-          <div class="form-floating mb-3">
-            <textarea class="form-control" id="mensaje" style="height: 10rem" placeholder="Escribí tu mensaje acá..."></textarea>
-            <label for="mensaje">Mensaje</label>
-          </div>
-          <!-- Botón -->
-          <div class="d-grid">
-            <button class="btn btn-primary btn-xl" type="submit" disabled>Enviar</button>
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+        <form class="card border-0 shadow-sm">
+          <div class="card-body p-5">
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-floating">
+                  <input class="form-control" id="nombre" type="text" placeholder="Tu nombre completo" />
+                  <label for="nombre">Nombre completo</label>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-floating">
+                  <input class="form-control" id="email" type="email" placeholder="nombre@ejemplo.com" />
+                  <label for="email">Correo electrónico</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-floating">
+                  <input class="form-control" id="telefono" type="tel" placeholder="(11) 1234-5678" />
+                  <label for="telefono">Teléfono</label>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="form-floating">
+                  <select class="form-select" id="servicio">
+                    <option selected disabled>Selecciona una opción</option>
+                    <option value="basico">Plan Básico</option>
+                    <option value="standard">Plan Standard</option>
+                    <option value="premium">Plan Premium</option>
+                    <option value="personalizado">Solución Personalizada</option>
+                  </select>
+                  <label for="servicio">Servicio de interés</label>
+                </div>
+              </div>
+            </div>
+            <div class="form-floating mb-4">
+              <textarea class="form-control" id="mensaje" style="height: 10rem" placeholder="Escribí tu mensaje acá..."></textarea>
+              <label for="mensaje">Mensaje</label>
+            </div>
+            <div class="d-grid">
+              <button class="btn btn-primary btn-lg rounded-pill py-3" type="submit">Enviar Mensaje</button>
+            </div>
           </div>
         </form>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-lg-4 text-center">
-        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-        <div>+54 9 3517720414</div>
+    
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8 text-center">
+        <h3 class="mb-4" data-aos="fade-up" data-aos-delay="100">Otras formas de contacto</h3>
+        <div class="d-flex justify-content-center mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="mx-4">
+            <i class="bi bi-phone fs-2 text-primary mb-3"></i>
+            <div>+54 9 3517720414</div>
+          </div>
+          <div class="mx-4">
+            <i class="bi bi-envelope fs-2 text-primary mb-3"></i>
+            <div>lautaromoyanoing@gmail.com</div>
+          </div>
+        </div>
+        
+        <div class="social-links" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://github.com/LautaroMoyano26" class="btn btn-dark" target="_blank">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/lautaromoyanoisaui/" class="btn btn-primary" target="_blank">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/lautimoyano.sw/" class="btn btn-danger" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="" class="btn btn-info text-white" target="_blank">
+            <i class="bi bi-twitter"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row justify-content-center mt-4">
-    <div class="col-lg-4 text-center">
-      <a href="https://github.com/LautaroMoyano26" class="btn btn-dark me-2" target="_blank">
-        <i class="bi bi-github"></i> GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/lautaromoyanoisaui/" class="btn btn-primary" target="_blank">
-        <i class="bi bi-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://www.instagram.com/lautimoyano.sw/" class="btn btn-warning" target="_blank" style="margin: 1%;">
-        <i class="bi bi-instagram"></i> Instagram
-      </a>
-    </div>
-  </div>
-  
 </section>
 
-
 <!-- Footer -->
-<footer class="bg-dark text-white text-center py-3">
+<footer class="py-4">
   <div class="container">
-    &copy; 2025 Lautaro Moyano. Todos los derechos reservados.
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="mb-0">&copy; 2025 Lautaro Moyano. Todos los derechos reservados.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+        <a href="#" class="text-decoration-none text-muted me-3">Términos y Condiciones</a>
+        <a href="#" class="text-decoration-none text-muted">Política de Privacidad</a>
+      </div>
+    </div>
   </div>
 </footer>
 
+<!-- Back to top button -->
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+  <i class="bi bi-arrow-up-short"></i>
+</a>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Navbar scroll behavior
+    const navbar = document.getElementById('mainNav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-dark');
+        navbar.classList.add('shadow');
+      } else {
+        navbar.classList.remove('bg-dark');
+        navbar.classList.remove('shadow');
+      }
+    });
+    
+    // Trigger initial scroll check
+    window.dispatchEvent(new Event('scroll'));
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 70,
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu if open
+          const navbarCollapse = document.getElementById('navbarNav');
+          if (navbarCollapse.classList.contains('show')) {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+            bsCollapse.hide();
+          }
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
