@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #2c3e50;
-  --secondary-color: #3498db;
+  --secondary-color: #126e12;
   --accent-color: #e67e22;
   --light-bg: #f8f9fa;
   --dark-bg: #1a1a1a;
@@ -259,7 +259,7 @@ h6,
 }
 
 #planes .featured-plan .card-header {
-  background: linear-gradient(135deg, var(--secondary-color), #2980b9);
+  background: linear-gradient(135deg, var(--secondary-color), #053f0d);
 }
 
 /* Contacto */
